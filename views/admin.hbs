@@ -1,0 +1,32 @@
+<style>
+    th{
+        color: white;
+    }
+     td{
+        color: white;
+    }
+</style>
+<table class="table table-striped">
+<thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">email</th>
+      <th scope="col">Mobile</th>
+            <th scope="col">status</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each result}}
+    <tr>
+     <td>{{this.name}}</td>
+    <td>{{this.email}}</td>
+    <td>{{this.mobile}}</td>
+    <td>{{this.status}}</td>
+     <td><a class="btn btn-outline-danger" href="/users/block/{{this.id}}">Block</a></td>
+        <td><a class="btn btn-outline-success" href="/users/unblock/{{this.id}}">Unblock</a></td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
